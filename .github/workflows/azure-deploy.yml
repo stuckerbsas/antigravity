@@ -5,8 +5,9 @@
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN... }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
-          ###### CONFIGURACIÓN HTML PURO ######
-          app_location: "/"      # Raíz de tus archivos
-          api_location: ""       # Déjalo vacío
-          output_location: "."   # IMPORTANTE: Un punto (o vacío) significa "aquí mismo"
-          #####################################
+          ###### ESTAS SON LAS LÍNEAS CLAVE ######
+          app_location: "/"       # Dónde está tu index.html
+          api_location: ""        # Vacío
+          output_location: "."    # Un punto (significa "aquí mismo")
+          skip_app_build: true    # <--- ESTO EVITA EL ERROR DE NPM
+          ########################################
